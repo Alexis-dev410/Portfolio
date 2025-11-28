@@ -1,3 +1,7 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+/Games/Assignment 1.pck
+/Games/Assignment 4.pck
+/Games/Assignment 5.pck
