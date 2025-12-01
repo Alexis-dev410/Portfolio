@@ -13,15 +13,22 @@ func _ready():
 
 
 func _on_parkour_play_button_pressed() -> void:
+	$BackgroundMusic.stream_paused = true
 	var game_path := ProjectSettings.globalize_path("res://games/Assignment 1.exe")
 	OS.shell_open(game_path)
 
 
 func _on_prison_play_button_pressed() -> void:
+	$BackgroundMusic.stream_paused = true
 	var game_path := ProjectSettings.globalize_path("res://games/Assignment 4.exe")
 	OS.shell_open(game_path)
 
 
 func _on_td_play_button_pressed() -> void:
+	$BackgroundMusic.stream_paused = true
 	var game_path := ProjectSettings.globalize_path("res://games/Assignment 5.exe")
 	OS.shell_open(game_path)
+
+func _notification(what):
+	if what == NOTIFICATION_APPLICATION_FOCUS_IN:
+		$BackgroundMusic.stream_paused = false
