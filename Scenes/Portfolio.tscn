@@ -1,7 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://bmrptoldd76b2"]
+[gd_scene load_steps=18 format=3 uid="uid://bmrptoldd76b2"]
 
 [ext_resource type="Script" uid="uid://b8dsl1pprwb27" path="res://Scripts/portfolio.gd" id="1_bn2y4"]
-[ext_resource type="Texture2D" uid="uid://clm1qstgkvhyt" path="res://Assets/Assignment1.webp" id="3_bn2y4"]
+[ext_resource type="Texture2D" uid="uid://bh84pcorh74a6" path="res://Assets/Assignment 1.webp" id="3_bn2y4"]
 [ext_resource type="Texture2D" uid="uid://2yrt3fovgcas" path="res://Assets/Prison.webp" id="4_ftr4p"]
 [ext_resource type="Texture2D" uid="uid://3o1cr7locorc" path="res://Assets/pixelart_starfield.png" id="4_wns4k"]
 [ext_resource type="AudioStream" uid="uid://cbfy0yln2jtqt" path="res://Assets/Comet Observatory theme.mp3" id="5_epvqv"]
@@ -34,12 +34,24 @@ font_size = 24
 outline_size = 2
 outline_color = Color(0.15686275, 0.47058824, 1, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_46nt4"]
+font_color = Color(0.21960784, 0.6784314, 1, 1)
+outline_size = 3
+
+[sub_resource type="LabelSettings" id="LabelSettings_ftr4p"]
+font_color = Color(0.21960784, 0.6784314, 1, 1)
+outline_size = 3
+
+[sub_resource type="LabelSettings" id="LabelSettings_vaiur"]
+font_color = Color(0.21960784, 0.6784314, 1, 1)
+outline_size = 3
+
 [node name="CanvasLayer" type="Node2D"]
 script = ExtResource("1_bn2y4")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
-scale = Vector2(3.6, 2.025)
+scale = Vector2(5, 5)
 texture = ExtResource("4_wns4k")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -104,6 +116,7 @@ size_flags_horizontal = 4
 text = "Help Brain Home
 Assist Brian in making it home safely
 through parkour"
+label_settings = SubResource("LabelSettings_46nt4")
 horizontal_alignment = 1
 
 [node name="ParkourPlayButton" type="Button" parent="CanvasLayer/ScrollContainer/VBoxContainer/TextureRect/VBoxContainer"]
@@ -138,6 +151,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 text = "Prison Escape
 Avoid the Guards and escape prison"
+label_settings = SubResource("LabelSettings_ftr4p")
 horizontal_alignment = 1
 
 [node name="PrisonPlayButton" type="Button" parent="CanvasLayer/ScrollContainer/VBoxContainer/TextureRect2/VBoxContainer"]
@@ -173,6 +187,7 @@ size_flags_horizontal = 4
 text = "Tower Defense
 Endless Defense against Ogres
 Aim for the best score!"
+label_settings = SubResource("LabelSettings_vaiur")
 horizontal_alignment = 1
 
 [node name="TDPlayButton" type="Button" parent="CanvasLayer/ScrollContainer/VBoxContainer/TextureRect3/VBoxContainer"]
